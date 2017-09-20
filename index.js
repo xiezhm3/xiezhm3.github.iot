@@ -1,7 +1,7 @@
 $(function() {
     "use strict";
 
-    $("body").on("load", function() {
-        alert("hello");
+    $(window).ready(function() {
+        alert("sorry for the maintaining.");
     });
 });
