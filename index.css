@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 12em auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 12em;
+}
+
+#footer {
+    position: relative;
+    bottom: 0px;
+    width: 200px;
+    margin: 0 auto;
+    color: black;
+    line-height: 30px;
+    background: gold;
+    height: 30px;
+}
