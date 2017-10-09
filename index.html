@@ -33,7 +33,7 @@
     </div>
     <div class="bodyer"></div>
     <div class="footer">
-        <div class="searcher"><input value="" onfocus="this.select();" placeholder="search" class="ip_keywords" /></div>
+        <div class="searcher"><input value="" onfocus="this.select();" placeholder="search" class="ip_keywords"/></div>
     </div>
 </div>
 
@@ -48,8 +48,123 @@
 
 		var treeGrid = new TreeGrid(container);
 
-		treeGrid.render();
+		var changeItem = function (index) {
+			var rowData = treeGrid.getRowItem(index);
+			if (!treeGrid.isRowSelectable(rowData)) {
+				return;
+			}
+			treeGrid.setSelectedRow(index);
+			var v = rowData.id || rowData.name;
+			document.querySelector(".iframe").src = v + ".html";
+			window.location.hash = v;
+		};
 
+		treeGrid.bind("onClick", function (e, d) {
+			changeItem(d.row);
+		});
+
+		treeGrid.bind("onRenderStart", function () {
+//            this.time_render_start = new Date();
+		}).bind("onRenderComplete", function () {
+
+			var id = window.location.hash;
+			if (id) {
+				id = id.substr(1);
+				id = id.replace(".html", "");
+			} else {
+				//default
+				id = "home";
+			}
+			var rowData = treeGrid.getRowItemBy({
+				id: id
+			});
+			if (rowData) {
+				changeItem(rowData.tg_index);
+			}
+		});
+
+		$('.ip_keywords').bind("keyup change", function() {
+			var k = $(this).val();
+			if (k === keywords) {
+				return;
+			}
+			keywords = k;
+			//update rows
+			treeGrid.update();
+		});
+
+		var keywords = "";
+
+		var render = function () {
+			var option = {
+				theme: "",
+				showHeader: false,
+				rowFilter: function (rowData) {
+					if (!keywords) {
+						return true;
+					}
+					if (rowData.tg_frozen) {
+						return true;
+					}
+					var name = rowData.name;
+					if (name) {
+						name = name.toLowerCase();
+						if (name.indexOf(keywords) != -1) {
+							return true;
+						}
+					}
+					return false;
+				}
+			};
+			treeGrid.setOption(option);
+
+			var data = {
+				columns: [{
+					id: "name",
+					name: "Name",
+					titleable: true,
+					width: 195
+				}],
+				rows: [{
+                    id: "home",
+                    name: "Home"
+                },{
+					name: "OCT 2017",
+					subs: [{
+						id: "",
+						name: ""
+					}]
+				}]
+			};
+			treeGrid.setData(data);
+			treeGrid.render();
+		};
+		var layout = function () {
+			var body = $(document.body);
+			var bw = body.width();
+			var bh = body.height();
+
+			var main = $(".main");
+			var dw = main.outerWidth();
+
+			var th = bh - $(".header").outerHeight() - $(".footer").outerHeight();
+			$(".bodyer").height(th);
+
+			var iw = bw - dw;
+			var ih = bh;
+
+			$(".iframe").css({
+				"margin-left": dw + "px"
+			}).width(iw).height(ih);
+		};
+
+		$(window).resize(function () {
+			layout();
+			treeGrid.resize();
+		});
+
+		layout();
+		render();
 	})();
 </script>
 </body>

@@ -13,6 +13,9 @@ html, body, p {
     font-family: "Univers";
 }
 
+title {
+}
+
 input, textarea, select, button {
     font-family: "Times New Roman";
     font-size: 16px;
@@ -63,6 +66,7 @@ a:hover {
 .title {
     font-size: 20px;
     font-weight: bold;
+    margin-top: -10px;
     height: 35px;
     line-height: 35px;
     text-align: center;
