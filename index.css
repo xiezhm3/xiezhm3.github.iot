@@ -11,7 +11,7 @@ html, body, p {
     flex-flow: column;
     display: flex;
     font-family: "Morningstar 1 U";
-    background-color: lightyellow;
+    background-color: whitesmoke;
 }
 
 title {
@@ -61,7 +61,7 @@ a:hover {
 .header {
     padding: 10px 10px;
     border-bottom: 1px solid #999999;
-    background: lightyellow;
+    /*background: lightyellow;*/
 }
 
 .title {

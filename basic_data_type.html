@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量、作用域以及内存问题</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        .container {
+            width: 63%;
+            margin: 10px auto;
+            border-bottom: 2px solid black;
+        }
+         pre {
+            font-size: 12px;
+            padding: 2px 0 2px 15px;
+            border-left: 4px solid #bbb;
+            border-top: 0;
+            border-bottom: 0;
+            margin: 0 auto;
+            display: block;
+            line-height: 18px;
+            font-style: normal;
+            white-space: pre;
+            background-color: #efeeee;
+            font-family: Consolas;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>五种基本数据类型</h3>
+    <blockquote>
+        null, undefined, Number, String, Boolean
+    </blockquote>
+    <h3>检测类型</h3>
+    <p>1. <em>typeof</em> : 基本类型</p>
+    <pre>
+
+        var s = 'str';
+        var b = false;
+        var i = 123;
+        var u;
+        var n = null;
+        var o = new Object();
+
+        typeof s; // string
+        typeof b; // boolean
+        typeof i; // number
+        typeof u; // undefined
+        typeof n; // object
+        typeof o; // object
+    </pre>
+    <p>2.<em>instanceof</em> : 引用类型</p>
+    <pre>
+
+        person instanceof Object;
+    </pre>
+    <h3>按值传递参数</h3>
+    <blockquote>
+
+        ECMAScript中所有函数的参数都是按值传递的。(引用类型实质上是<em>共享传递</em>)
+    </blockquote>
+    <h3>ES5没有块级作用域</h3>
+    <pre>
+
+        if(true) {
+            var i = 0; // var声明的变量会自动被添加到最接近的环境中
+        }
+        alert(i); // 0
+    </pre>
+    <p>ES6中增加了新的关键字 let，用于声明块级作用域；但我们可以模仿快级作用域：</p>
+    <pre>
+
+        // JavaScript中没有块级作用域的概念，也就是说，在块语句中定义的变量，实际上是在包含函数中而非语句中创建
+
+        (function() {
+        // here is the block area
+        })();
+
+        // 无论什么时候，只要临时需要一些变量，就可以使用私有作用域：
+
+        function outputNumbers(count) {
+            (function() {
+                for(var i = 0; i < count; i++) {
+                    console.log(i);
+                }
+            })();
+            alert(i); // Error!
+        }
+    </pre>
+    <h3>垃圾收集</h3>
+    <blockquote>
+
+        JS具有自动垃圾收集机制。执行环境会负责管理代码执行过程中使用的内存。
+    </blockquote>
+
+    <h3>解除引用(dereferencing)</h3>
+    <blockquote>
+        解除引用的真正作用是让值脱离执行环境，方便垃圾回收器下次运行时将它回收。
+    </blockquote>
+    <br>
+    <br>
+    <br>
+</div>
+</body>
+</html>
