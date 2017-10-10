@@ -1,0 +1,31 @@
+body {
+    margin: 0 auto;
+}
+h1 {
+    margin: 10px auto;
+    text-align: center;
+}
+.container {
+    clear: both;
+    width: 63%;
+    margin: 10px auto;
+    border-bottom: 2px solid black;
+}
+.header {
+    text-align: center;
+}
+pre {
+    font-size: 12px;
+    padding: 2px 0 2px 15px;
+    border-left: 4px solid #bbb;
+    border-top: 0;
+    border-bottom: 0;
+    margin: 0 auto;
+    display: block;
+    line-height: 18px;
+    font-style: normal;
+    white-space: pre;
+    background-color: #efeeee;
+    font-family: Consolas;
+    font-weight: bold;
+}
