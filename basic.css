@@ -26,7 +26,7 @@ p {
 pre, blockquote {
     font-size: 12px;
     padding: 2px 0 2px 15px;
-    border-left: 4px solid #bbb;
+    /*border-left: 3px solid #aaaaaa;*/
     border-top: 0;
     border-bottom: 0;
     margin: 0 auto;
