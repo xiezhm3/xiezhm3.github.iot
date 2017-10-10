@@ -34,6 +34,7 @@ pre, blockquote {
     line-height: 18px;
     font-style: normal;
     white-space: pre;
+    width:100%;
     background-color: #efeeee;
     /*font-family: Consolas;*/
     font-weight: bold;

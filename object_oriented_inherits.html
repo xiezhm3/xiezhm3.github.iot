@@ -3,8 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Method Inheritance</title>
+    <link rel="stylesheet" href="./basic.css">
 </head>
 <body>
+<h1>Object Oriented 继承</h1>
+<div class="header">
+    <span class="author">Jimmy Xie</span><br>
+    <span class="date">10 OCT 2017</span>
+</div>
+<div class="container">
+        <span>一般OO语言支持两种继承方式：<strong>接口继承和实现继承</strong>。
+       ECMAScript<strong>只支持实现继承</strong>，而且其实现主要依靠<strong>原型链</strong>。</span>
+    <h3>1. 原型链</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：利用原型让一个引用类型继承另一个引用类型的属性和方法。</p>
+    <pre>
 
+        function Person() {
+            this.property = true;
+        }
+
+        Person.prototype.getProperty = function() {
+            return this.property;
+        };
+
+        function SoftwareDeveloper(skill) {
+            this.skill = skill;
+        }
+        // 继承Person
+        SoftwareDeveloper.prototype = new Person();
+
+        var dev = new SoftwareDeveloper("JS");
+    </pre>
+    <br>
+    <blockquote>
+        ! 继承是通过创建Person(父类)实例，并将该实例赋给SoftwareDeveloper.prototype实现的。
+
+        1. 别忘记了Object原型：
+
+        所有函数的默认原型都是Object实例。
+
+        问题：
+        1. 最主要的问题是来自包含引用类型值的原型；
+        2. 在创建子类型的实例时，不能向超类型的构造函数中传递参数
+
+        因此，实际中很少会单独使用原型链。
+    </blockquote>
+
+    <h3>2. 借用构造函数： Constructor Stealing</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<strong>在子类型构造函数的内部调用超类型的构造函数</strong> => 函数只不过是在特定环境中执行代码的对象，因此可以使用apply()/call()在新创建的对象上执行构造函数</p>
+
+    <pre>
+        function SuperType(name) {
+            this.name = name;
+            this.colors = ["golden", "red"];
+        }
+
+        function SubType() {
+            // 继承了 SuperType 以及 传递参数
+            SuperType.call(this, "Nicolas");
+        }
+
+        // 在新的SubType对象上执行SuperType()函数中定义的所有对象初始化代码，结果SubType的每个实例就都会有自己的colors的副本
+
+        var instance1 = new SubType();
+        instance1.colors.push("yellow"); // ["golden", "red", "yellow"]
+
+        var instance2 = new SubType();
+        instance2.colors; // ["golden", "red"]
+    </pre>
+    <blockquote>很少单独使用。因为无法避免构造函数模式存在的问题：方法都在构造函数中定义，因此函数复用就无从谈起。</blockquote>
+
+    <h3>3. 组合继承</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承</p>
+    <pre>
+    var SuperType(name) {
+        this.name = name;
+        this.colors = ["golden"];
+    }
+
+    SuperType.prototype.sayName = function() {
+      console.log(this.name);
+    };
+
+    var SubType(name, age) {
+        SuperType.call(this, name);
+        this.age = age;
+    }
+    // 原型继承
+    SubType.prototype = new SuperType();
+    SubType.prototype.sayAge = function() {
+        console.log(this.age);
+    };
+
+    var instance = new SubType();
+    </pre>
+
+    <h3>4. 原型式继承</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：借助原型可以基于已有对象创建新的对象，同时还不必因此创建自定义类型</p>
+    <pre>
+
+        function object(o) {
+            function F(){};
+            F.prototype = o; // 浅复制，对于引用类型属性会有问题
+            return new F();
+        }
+        ECMAScript 5 增加 Object.create() 方法来规范原型式继承；接收两个参数
+
+        var person = {
+            name: "Nicolas",
+            friends: ["Bob"]
+        };
+
+        var anotherPerson = Object.create(person);
+        anotherPerson.friends.push("Paul");
+
+        person.friends; // ["Bob", "Paul"]
+
+        var yetAnotherPerson = Object.create(person, {
+            configurable: false,
+            name: "Jimmy"
+        }); // 第二个参数为一个为新对象定义的额外属性
+    </pre>
+
+    <h3>5. 寄生式继承</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;不能做到函数复用从而也会降低效率，与构造函数模式类似</p>
+    <pre>
+        function createAnother(o) {
+            var clone = Object.create(o); //创建一个新对象
+
+            clone.sayHi = function() { // 增加新对象的属性和方法
+                console.log("hi");
+            };
+
+            return clone; // 返回这个新对象
+        }
+    </pre>
+
+    <h3>6. 寄生组合式继承</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>组合继承最大的问题就是，无论什么情况下，都会调用两次超类型构造函数</strong></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;寄生组合式继承： 通过借用构造函数来继承属性，通过原型链的混合形式来继承方法。</p>
+    <pre>
+
+     function inheritPrototype(SubType, SuperType) {
+
+        var prototype = Object.create(SuperType.prototype);
+
+        prototype.constructor = SubType;
+
+        SubType.prototype = prototype;
+    }
+
+    function SuperType(name) {
+        this.name = name;
+        this.colors = ["red", "green"];
+    }
+
+    SuperType.prototype.sayName = function() {
+        console.log(this.name);
+    };
+
+    function SubType(name, age) {
+        SuperType.call(this, name);
+
+        this.age = age;
+    }
+
+    inheritPrototype(SubType, SuperType);
+
+    SubType.prototype.sayAge = function() {
+        console.log(this.age);
+    };
+ </pre>
+    <br>
+    <br>
+    <br>
+</div>
 </body>
 </html>
