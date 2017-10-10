@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OO-JS</title>
+    <link href="./basic.css" rel="stylesheet">
+</head>
+<body>
+<h1>JS Object-Oriented</h1>
+<div class="header">
+    <span class="author">Jimmy Xie</span><br>
+    <span class="date">10 OCT 2017</span>
+</div>
+<div class="container">
+    <pre>
+
+        每个对象都是基于一个引用类型创建的，这个引用类型可以是原生类型，也可以是开发人员定义的类型.
+    </pre>
+    <h3>创建对象</h3>
+    <p><strong>1. 工厂模式</strong></p>
+    <pre>
+
+    var createObject = function(name, age, job) {
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function() {
+            console.log(name);
+        };
+        return o;
+    } //没有解决对象识别问题，即不知道对象的类型
+
+    var object = createObject("Bob", 21, "web developer");
+    </pre>
+    <p><strong>2. 构造函数模式</strong></p>
+    <pre>
+
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function() {
+            console.log(name);
+        };
+    }
+    var person = new Person("Bob", 21, "web developer");
+
+    /**
+    * person有一个constructor属性，指向构造函数Person.
+    *创建自定义的构造函数意味着将来可以将它的实例标识位一种特性的类型
+    **/
+
+    </pre>
+
+    <p>使用 new 操作符创建Person的实例，会经历一下几个步骤：</p>
+
+    <blockquote>
+        1.创建一个新对象；
+        2.将构造函数的作用域赋给新对象（this指向新的对象）
+        3.执行构造函数中的代码（为这个新对象添加属性）
+        4.返回新对象
+    </blockquote>
+    <p>主要问题是： 使用构造函数的主要问题，就是每个方法都要在每个实例上重新创建一遍，对于公用的方法会浪费内存。</p>
+
+    <p><strong>3. 原型模式</strong></p>
+
+    <blockquote>
+        使用原型模式的好处是可以让所有对象实例共享它所包含的属性和方法
+
+        > 实际上，创建的每一个函数都有一个 prototype 属性，指向函数的原型对象。
+
+        > 在 默认情况 下，每个原型对象都会自动获得一个 constructor 属性，这个属性包含一个指向 prototype 属性所在函数的指针
+
+        > 创建自定义的构造函数之后，其原型对象默认只会取得 constructor 属性；其他方法，则都是从 Object 继承而来
+
+        > 当调用构造函数创建一个新实例后，该实例的内部将包含一个指针(内部属性[[prototype]]),指向构造函数的原型对象。
+    </blockquote>
+    <br>
+    <pre>
+
+        functions Person() {
+
+        }
+        Person.prototype = {
+            constructor: Person, //重写原型对象的时候，要指定构造函数
+            name: "",
+            age: 21,
+            job: "",
+            friends: ["Jimmy", "Pip"],
+            sayName: function() {
+                console.log(name);
+            }
+        };
+    </pre>
+    <p>原型对象的问题：<br><br>
+        由于会共享原型对象的属性和方法，当包含引用类型的属性（如上面的friends）时，就会使得不同的实例修改该属性，全部实例都会得到修改后的实例。
+        <br><br>
+        而这也是很少单独使用原型模式的原因所在。</p>
+
+    <p><strong>4. 组合使用构造函数和原型模式: 定义引用类型的默认模式</strong></p>
+
+    <pre>构造函数模式用于定义实例属性，原型模式用于定义方法和共享的属性
+
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.friends = ["Jimmy"];
+        }
+
+        Person.prototye = {
+            constructor: Person,
+            sayName: function(){
+                console.log(this.name);
+            }
+        };
+    </pre>
+
+    <p><strong>5. 动态原型模式</strong></p>
+
+    <blockquote>即，通过检查某个应该存在的方法是否存在，来决定是否需要初始化原型：</blockquote>
+
+    <pre>
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+
+            if(typeof this.sayName != "function") {
+                Person.prototype.sayName = function() {
+                    console.log(this.name);
+                };
+            }
+        }
+    </pre>
+
+    <p><strong>6. 寄生构造函数模式</strong></p>
+    <blockquote>
+        基本思想：创建一个函数，该函数的作用仅仅是封装创建对戏那个的代码，然后再返回新创建的对象
+
+        和工厂模式一样，只是这里用的是构造函数的概念。
+
+        > 一般不要使用这种模式。
+
+        Important: 返回的对象与构造函数或者与构造函数的原型属性之间没有关系。
+    </blockquote>
+
+    <pre>
+        function Person(name, age, job) {
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.sayName = function() {
+                console.log(this.name);
+            };
+            return o;
+        }
+    </pre>
+
+    <p><strong>7. 稳妥构造函数模式</strong></p>
+
+    <blockquote>
+        所谓的稳妥对象，指的是 没有公共属性，而且其方法也不引用this的对象。
+
+        与寄生构造函数模式的区别：
+
+            1. 新创建对象的实例方法不引用this;
+            2. 不实用new操作符调用构造函数
+    </blockquote>
+
+    <pre>
+        function Person(name, age, job) {
+            // 创建要返回的对象
+            var o = new Object();
+
+            // 可以在这里定义私有属性和函数
+
+            // 添加方法
+            o.sayName = function() {
+                console.log(name);
+            };
+
+            //返回对象
+            return o;
+        }
+    </pre>
+    <blockquote>在以这种模式创建的对象中，除了使用 sayName()方法之外，没有其他办法访问 name 的值。</blockquote>
+
+    <br>
+    <br>
+    <br>
+</div>
+</body>
+</html>

@@ -1,20 +1,29 @@
 body {
     margin: 0 auto;
+    font-family: Consolas
 }
+
 h1 {
     margin: 10px auto;
     text-align: center;
 }
+
 .container {
     clear: both;
     width: 63%;
     margin: 10px auto;
     border-bottom: 2px solid black;
 }
+
 .header {
     text-align: center;
 }
-pre {
+
+p {
+    /*font-weight: bold;*/
+}
+
+pre, blockquote {
     font-size: 12px;
     padding: 2px 0 2px 15px;
     border-left: 4px solid #bbb;
@@ -26,6 +35,10 @@ pre {
     font-style: normal;
     white-space: pre;
     background-color: #efeeee;
-    font-family: Consolas;
+    /*font-family: Consolas;*/
     font-weight: bold;
+}
+
+pre {
+    color: darkgreen;
 }
