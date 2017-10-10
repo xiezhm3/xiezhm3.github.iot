@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/object_oriented_js.html" afterPath="$PROJECT_DIR$/object_oriented_js.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="object_oriented_js.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/object_oriented_js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="684">
+              <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -173,7 +172,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23247000" />
+    <option name="totallyTimeSpent" value="23536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
@@ -353,8 +352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/object_oriented_js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="684">
+          <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
           <folding />
         </state>
       </provider>
