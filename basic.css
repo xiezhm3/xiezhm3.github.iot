@@ -6,11 +6,12 @@ body {
 h1 {
     margin: 10px auto;
     text-align: center;
+    padding:0;
 }
 
 .container {
     clear: both;
-    width: 63%;
+    width: 88.88%;
     margin: 10px auto;
     border-bottom: 2px solid black;
 }
@@ -34,7 +35,7 @@ pre, blockquote {
     line-height: 18px;
     font-style: normal;
     white-space: pre;
-    width:100%;
+    width:88.88%;
     background-color: #efeeee;
     /*font-family: Consolas;*/
     font-weight: bold;

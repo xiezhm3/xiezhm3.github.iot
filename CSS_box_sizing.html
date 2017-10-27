@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./basic.css">
+    <title>CSS3 Box-sizing Property</title>
+    <style>
+        .container p {
+            line-height: 22px;
+        }
+
+        .container p span {
+            display: inline-block;
+            background-color: palegoldenrod;
+            height: 21px;
+            border: 1px solid goldenrod;
+            border-radius: 4px;
+            padding: 1px;
+            font-size: larger;
+            color: darkgreen;
+        }
+
+        .container p span:hover {
+            /*background-color: darkgreen;*/
+            /*color: #f5f5f5;*/
+            cursor: pointer;
+        }
+
+        .container .example .note {
+            font-variant: titling-caps;
+            font-size: 1.2em;
+        }
+
+        .container .box {
+            width: 200px;
+            height: 200px;
+            background-color: darkgreen;
+            padding: 10px;
+            border: 5px solid black;
+            text-align: center;
+            line-height: 200px;
+            color: #f5f5f5;
+            margin: 33px auto;
+        }
+
+        .container .content-box {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        .container .border-box {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: border-box;
+        }
+
+        .container .inherit {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS3 Box-sizing Property</h1>
+<div class="header">
+    <span class="author">Jimmy Xie</span><br>
+    <span class="date">27 OCT 2017</span>
+</div>
+<div class="container">
+    <p>CSS3 has a new property named <span>box-sizing</span>, its value can be <span>content-box</span>(default), <span>border-box</span>
+        and <span>inherit</span>.</p>
+    <pre>
+
+        box-sizing: content-box || border-box || inherit
+    </pre>
+    <h3>content-box</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Default value. Using <span>content-box</span> keep the W3C standard, which means
+        element width/height = border + padding + content width/height</p>
+
+    <h3>border-box</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Using this value means <span>element width/height</span> equals to <span>content width/height</span>,
+        and the border and padding are inside.
+        <span>element width/height = content width/height</span></p>
+
+    <h3>inherit</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;As the name meaning, it will inherit it parent's <span>box-sizing</span> property.</p>
+
+    <div class="example">
+        <p class="note">Sometimes it is confused to use them. Following are some example which help me to use them.</p>
+
+        <pre>
+            .container .box {
+                width: 200px;
+                height: 200px;
+                background-color: darkgreen;
+                padding: 10px;
+                border: 5px solid black;
+                text-align: center;
+                line-height: 200px;
+                color: #f5f5f5;
+                margin: 33px auto;
+            }
+
+            .container .content-box {
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+            .container .border-box {
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: border-box;
+            }
+
+            .container .inherit {
+                -webkit-box-sizing: inherit;
+                -moz-box-sizing: inherit;
+                box-sizing: inherit;
+            }
+        </pre>
+        <div class="box content-box">I am content-box</div>
+        <div class="box border-box">I am border-box</div>
+        <div class="box inherit">Inherit from my parent</div>
+    </div>
+</div>
+</body>
+</html>
