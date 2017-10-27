@@ -16,6 +16,24 @@ h1 {
     border-bottom: 2px solid black;
 }
 
+.container p {
+    line-height: 22px;
+}
+
+.container p span {
+    display: inline-block;
+    background-color: palegoldenrod;
+    height: 21px;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    padding: 1px;
+    font-size: larger;
+    color: darkgreen;
+}
+
+.container p span:hover {
+    cursor: pointer;
+}
 .header {
     text-align: center;
 }

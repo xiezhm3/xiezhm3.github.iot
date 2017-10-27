@@ -12,10 +12,10 @@
     <span class="date">10 OCT 2017</span>
 </div>
 <div class="container">
-        <span>一般OO语言支持两种继承方式：<strong>接口继承和实现继承</strong>。
-       ECMAScript<strong>只支持实现继承</strong>，而且其实现主要依靠<strong>原型链</strong>。</span>
+        <p>一般OO语言支持两种继承方式：<span>接口继承和实现继承</span>。
+       ECMAScript<span>只支持实现继承</span>，而且其实现主要依靠<span>原型链</span>。</p>
     <h3>1. 原型链</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：利用原型让一个引用类型继承另一个引用类型的属性和方法。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<span>利用原型让一个引用类型继承另一个引用类型的属性和方法。</span></p>
     <pre>
 
         function Person() {
@@ -50,7 +50,7 @@
     </blockquote>
 
     <h3>2. 借用构造函数： Constructor Stealing</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<strong>在子类型构造函数的内部调用超类型的构造函数</strong> => 函数只不过是在特定环境中执行代码的对象，因此可以使用apply()/call()在新创建的对象上执行构造函数</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<span>在子类型构造函数的内部调用超类型的构造函数</span> => 函数只不过是在特定环境中执行代码的对象，因此可以使用apply()/call()在新创建的对象上执行构造函数</p>
 
     <pre>
         function SuperType(name) {
@@ -74,7 +74,7 @@
     <blockquote>很少单独使用。因为无法避免构造函数模式存在的问题：方法都在构造函数中定义，因此函数复用就无从谈起。</blockquote>
 
     <h3>3. 组合继承</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<span>使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承</span></p>
     <pre>
     var SuperType(name) {
         this.name = name;
@@ -99,7 +99,7 @@
     </pre>
 
     <h3>4. 原型式继承</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：借助原型可以基于已有对象创建新的对象，同时还不必因此创建自定义类型</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;基本思想：<span>借助原型可以基于已有对象创建新的对象，同时还不必因此创建自定义类型</span></p>
     <pre>
 
         function object(o) {
@@ -126,7 +126,7 @@
     </pre>
 
     <h3>5. 寄生式继承</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;不能做到函数复用从而也会降低效率，与构造函数模式类似</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span>不能做到函数复用从而也会降低效率，与构造函数模式类似</span></p>
     <pre>
         function createAnother(o) {
             var clone = Object.create(o); //创建一个新对象
@@ -141,7 +141,7 @@
 
     <h3>6. 寄生组合式继承</h3>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>组合继承最大的问题就是，无论什么情况下，都会调用两次超类型构造函数</strong></p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;寄生组合式继承： 通过借用构造函数来继承属性，通过原型链的混合形式来继承方法。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;寄生组合式继承： <span>通过借用构造函数来继承属性，通过原型链的混合形式来继承方法</span>。</p>
     <pre>
 
      function inheritPrototype(SubType, SuperType) {
