@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flex Box Notes</title>
+    <link rel="stylesheet" href="./basic.css">
+    <style>
+        body{
+            background-image: url("Halloween-2017.jpg");
+            color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS3 Flex Box</h1>
+<div class="header">
+    <span class="author">Jimmy Xie</span><br>
+    <span class="date" style="color: darkorange;">Happy Halloween @ 2017</span>
+</div>
+<div class="container">
+    <p><span>Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。</span></p>
+    <pre>
+
+        .box {
+            display: flex | inline-flex;
+            display: -webkit-flex; /*Safari*/
+        }
+    </pre>
+    <p><span>设为Flex布局之后，子元素的float, clear和vertical-align属性将失效。</span></p>
+    <h3><p><span>Basic Concepts</span></p></h3>
+    <ul>
+        <li><p><span>Flex Container （Flex 容器）：采用Flex布局的元素，称为"容器"</span></p></li>
+        <li><p><span>它的所有子元素自动成为容器成员，称为Flex item（Flex项目）；</span></p></li>
+    </ul>
+    <h3><p><span>容器属性</span></p></h3>
+    <ul>
+        <li>
+            <p><span><b>flex-direction</b>: row | row-reverse | column | column-reverse 决定主轴的方向</span></p>
+        </li>
+        <li>
+            <p><span><b>flex-wrap</b>: no-wrap | wrap | wrap-reverse 默认情况下，项目都排在一条线上;</span></p>
+            <p><span>flex-wrap定义如果一条轴线排不下如何换行</span></p>
+        </li>
+        <li>
+            <p><span><b>flex-flow</b>: flex-direction 和 flex-wrap 属性的简写形式，默认值位 row nowrap</span></p>
+        </li>
+        <li>
+            <p><span><b>justify-content</b>: flex-start | flex-end | space-between | space-around
+                <p><span>定义了项目在主轴线上的对齐方式</span></p>
+        </li>
+        <li>
+            <p><span><b>align-items</b>: flex-start | flex-end | center | stretch 定义项目在交叉轴上如何对齐；</span></p>
+            <p><span><b>如果项目未设置高度或设为auto,将占满整个容器的高度</b></span></p>
+        </li>
+        <li>
+            <p><span><b>align-content</b>: flex-start | flex-end | center | space-between | space-around | strech </span></p>
+            <p><span>定义多根轴线的对齐方式；如果项目只有一根轴线，此属性不起作用</span></p>
+        </li>
+    </ul>
+    <h3><p><span>项目属性</span></p></h3>
+    <ul>
+        <li>
+            <p><span><b>order</b>: 定义项目的排列顺序；数值越小排列越靠前；默认值为 0</span></p>
+        </li>
+        <li>
+            <p><span><b>flex-grow</b>: 定义项目的放大比例；默认位0，即如果有剩余空间，也不放大</span></p>
+        </li>
+        <li>
+            <p><span><b>flex-shrink</b>: 定义项目的缩小比例；默认位1，即如果空间不足，该项目也不缩小</span></p>
+        </li>
+        <li>
+            <p><span><b>flex-basis</b>: 定义在分配多余空间之前，项目占据的主轴空间(main size)。</span></p>
+            <p><span>浏览器据此计算主轴是否有多余空间；默认值为auto,即项目本来的大小</span></p>
+        </li>
+        <li>
+            <p><span><b>flex</b>: flex-grow flow-shrink flex-basis 的缩写，默认值为 0 1 auto;后两个属性可选</span></p>
+        </li>
+        <li>
+            <p><span><b>align-self</b>: 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性;</span></p>
+            <p><span>默认值为 auto,表示继承父元素的align-items属性；如果没有父元素，相当于stretch</span></p>
+        </li>
+    </ul>
+    <p><span>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" style="color: #000; text-decoration: none;">
+            CSS tricks has <span style="background-color: black; color: white; border: 1px solid black; margin-top: -2px;">a guide to flexbox</span>
+    </span></p>
+</div>
+</body>
+</html>
