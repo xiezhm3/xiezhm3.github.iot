@@ -40,9 +40,9 @@ body {
     border-radius: 50%;
     padding: 3px;
     transition: all 1.5s ease-in-out 0.3s;
-    animation: translateLogo 4s 1s infinite normal;
-    -webkit-animation: translateLogo 4s 1s infinite normal;
-    -moz-animation: translateLogo 4s 1s infinite normal;
+    animation: translateLogo 4s .1s infinite normal;
+    -webkit-animation: translateLogo 4s .1s infinite normal;
+    -moz-animation: translateLogo 4s .1s infinite normal;
     z-index: 100;
 }
 
@@ -99,10 +99,33 @@ body {
 
 .jx-svg-info {
     position: absolute;
+    animation: jump 2s ease-in-out .2s infinite alternate forwards;
     top: 50%;
     left: 50%;
     margin-left: -80px;
     margin-top: 0;
+}
+
+@keyframes jump {
+    from {
+        top: 50%;
+    }
+
+    25% {
+        top: 30%;
+    }
+
+    50% {
+        top: 30%;
+    }
+
+    75% {
+        top: 30%;
+    }
+
+    to {
+        top: 50%
+    }
 }
 
 #ash {
