@@ -37,11 +37,18 @@ body {
     margin-left: -100px;
     margin-top: -200px;
     border-radius: 50%;
-    border: 5px solid rgba(10, 10, 10, 0.8);
+    border: 5px solid rgb(129, 126, 126);
     padding: 3px;
+    transition: all 1.5s ease-in-out 0.3s;
+    transform: rotate(0deg) translate(0);
+    z-index: 100;
 }
 
 .jx-svg-logo:hover {
+    border: 8px solid rgb(206, 195, 195);
+    transition: all 3s ease-out .5s;
+    transform: rotate(360deg) translate(100px);
+    padding: 0px;
     border-radius: 10%;
     cursor: pointer;
 }
