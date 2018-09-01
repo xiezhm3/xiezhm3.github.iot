@@ -36,18 +36,62 @@ body {
     top: 50%;
     margin-left: -100px;
     margin-top: -200px;
-    border-radius: 50%;
     border: 5px solid rgb(129, 126, 126);
+    border-radius: 50%;
     padding: 3px;
     transition: all 1.5s ease-in-out 0.3s;
-    transform: rotate(0deg) translate(0);
+    animation: translateLogo 4s 1s infinite normal;
+    -webkit-animation: translateLogo 4s 1s infinite normal;
+    -moz-animation: translateLogo 4s 1s infinite normal;
     z-index: 100;
+}
+
+@keyframes translateLogo {
+    from {
+        transform: rotate(0) translate(0px);
+    }
+
+    25% {
+        transform: translate(200px);
+        box-shadow: 10px 10px 10px 10px rgb(236, 229, 229);
+    }
+
+    50% {
+        transform: translate(0px);
+        box-shadow: none;
+    }
+
+    75% {
+        transform: translate(-200px);
+        box-shadow: -10px 10px 10px 10px rgb(236, 229, 229);
+    }
+
+    to {
+        transform: translate(0);
+        box-shadow: none;
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0);
+        border-radius: 50%;
+        padding: 3px;
+        border: 5px solid rgb(129, 126, 126);
+    }
+
+    to {
+        transform: rotate(360deg);
+        border-radius: 10%;
+        padding: 0;
+        border: 8px solid rgb(206, 195, 195);
+    }
 }
 
 .jx-svg-logo:hover {
     border: 8px solid rgb(206, 195, 195);
     transition: all 3s ease-out .5s;
-    transform: rotate(360deg) translate(100px);
+    animation: rotateLogo 4s 0.5s ease-in-out infinite alternate;
     padding: 0px;
     border-radius: 10%;
     cursor: pointer;
