@@ -2,201 +2,24 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <meta name="apple-mobile-web-app-title" content="portfolio-common">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./treegrid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <title>Jimmy Xie Personal Blog</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="apple-mobile-web-app-title" content="portfolio-common">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<title>Jimmy Xie Personal Blog</title>
 </head>
 
 <body>
-
-<div class="main">
-    <div class="header">
-        <div class="logo">
-            <a href="##"><img src="##"></a>
-        </div>
-        <div class="title">Jimmy Xie</div>
-        <span>
-            <a href="https://github.com/xiezhm3" target="_blank" class="infor">Github</a>
-        </span>
-        <span>
-            <p class="infor">xiezhm3@gmail.com</p>
-        </span>
-    </div>
-    <div class="bodyer"></div>
-    <div class="footer">
-        <div class="searcher"><input value="" onfocus="this.select();" placeholder="search" class="ip_keywords"/></div>
-    </div>
-</div>
-
-<iframe class="iframe"></iframe>
-<script>
-	(function () {
-		"use strict";
-
-		var TreeGrid = treegrid.TreeGrid;
-
-		var container = $(".bodyer");
-
-		var treeGrid = new TreeGrid(container);
-
-		var changeItem = function (index) {
-			var rowData = treeGrid.getRowItem(index);
-			if (!treeGrid.isRowSelectable(rowData)) {
-				return;
-			}
-			treeGrid.setSelectedRow(index);
-			var v = rowData.id || rowData.name;
-			document.querySelector(".iframe").src = v + ".html";
-			window.location.hash = v;
-		};
-
-		treeGrid.bind("onClick", function (e, d) {
-			changeItem(d.row);
-		});
-
-		treeGrid.bind("onRenderStart", function () {
-//            this.time_render_start = new Date();
-		}).bind("onRenderComplete", function () {
-
-			var id = window.location.hash;
-			if (id) {
-				id = id.substr(1);
-				id = id.replace(".html", "");
-			} else {
-				//default
-				id = "home";
-			}
-			var rowData = treeGrid.getRowItemBy({
-				id: id
-			});
-			if (rowData) {
-				changeItem(rowData.tg_index);
-			}
-		});
-
-		$('.ip_keywords').bind("keyup change", function () {
-			var k = $(this).val();
-			if (k === keywords) {
-				return;
-			}
-			keywords = k;
-			//update rows
-			treeGrid.update();
-		});
-
-		var keywords = "";
-
-		var render = function () {
-			var option = {
-				theme: "",
-				showHeader: false,
-				rowFilter: function (rowData) {
-					if (!keywords) {
-						return true;
-					}
-					if (rowData.tg_frozen) {
-						return true;
-					}
-					var name = rowData.name;
-					if (name) {
-						name = name.toLowerCase();
-						if (name.indexOf(keywords) != -1) {
-							return true;
-						}
-					}
-					return false;
-				}
-			};
-			treeGrid.setOption(option);
-
-			var data = {
-				columns: [{
-					id: "name",
-					name: "Name",
-					titleable: true,
-					width: 195
-				}],
-				rows: [{
-					id: "home",
-					name: "HOME"
-				}, {
-					name: "FRONT END",
-					subs: [{
-						name: "2017",
-						subs: [{
-							id: "basic_data_type",
-							name: "Basic Data Type"
-						}, {
-							id: "object_oriented_js",
-							name: "Object Oriented JS"
-						}, {
-							id: "object_oriented_inherits",
-							name: "JS Method Inherit"
-						}, {
-                            id: "CSS_box_sizing",
-                            name: "CSS3 box-sizing Property"
-                        }, {
-							id: "CSS_flex_box",
-							name: "CSS3 Flex Box Notes"
-						}]
-					}]
-				}, {
-					name: "JAVA",
-					subs: [{
-						name: "2017",
-						subs: [{
-							id: "",
-							name: ""
-						}]
-					}]
-				}, {
-					name: "READING NOTES",
-					subs: [{
-						name: "2017",
-						subs: [{
-							id: "",
-							name: ""
-						}]
-					}]
-				}]
-			};
-			treeGrid.setData(data);
-			treeGrid.render();
-		};
-		var layout = function () {
-			var body = $(document.body);
-			var bw = body.width();
-			var bh = body.height();
-
-			var main = $(".main");
-			var dw = main.outerWidth();
-
-			var th = bh - $(".header").outerHeight() - $(".footer").outerHeight();
-			$(".bodyer").height(th);
-
-			var iw = bw - dw;
-			var ih = bh;
-
-			$(".iframe").css({
-				"margin-left": dw + "px"
-			}).width(iw).height(ih);
-		};
-
-		$(window).resize(function () {
-			layout();
-			treeGrid.resize();
-		});
-
-		layout();
-		render();
-	})();
-</script>
+	<div class="jx-container"></div>
+	<script>
+		window.addEventListener('load', function (e, data) {
+			alert('wait');
+		}, false);
+	</script>
 </body>
+
 </html>
