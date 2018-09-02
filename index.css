@@ -39,7 +39,7 @@ body {
     border: 5px solid rgb(129, 126, 126);
     border-radius: 50%;
     padding: 3px;
-    transition: all 1.5s ease-in-out 0.3s;
+    transition: all 1s ease-in-out 0.3s;
     animation: translateLogo 4s .1s infinite normal;
     -webkit-animation: translateLogo 4s .1s infinite normal;
     -moz-animation: translateLogo 4s .1s infinite normal;
@@ -81,7 +81,7 @@ body {
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(450deg);
         border-radius: 10%;
         padding: 0;
         border: 8px solid rgb(206, 195, 195);
@@ -90,7 +90,7 @@ body {
 
 .jx-svg-logo:hover {
     border: 8px solid rgb(206, 195, 195);
-    transition: all 3s ease-out .5s;
+    transition: all 4s ease-out .1s;
     animation: rotateLogo 4s 0.5s ease-in-out infinite alternate;
     padding: 0px;
     border-radius: 10%;
