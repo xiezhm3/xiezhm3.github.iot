@@ -1,4 +1,4 @@
-#JimmyX
+# JimmyX
 > some notes.
 
 1. [flex box](src/blog/flexible-box.md)
