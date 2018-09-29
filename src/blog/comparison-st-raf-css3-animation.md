@@ -81,8 +81,8 @@ rAF解决了时机问题，但是，使用rAF不恰当操作页面的时候，�
 
 1. [Youtube](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
     
-2.  [Infoq](http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering)
+2. [Infoq](http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering)
     
 3. [Event loop process model](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
     
- 4. [Google web developer](https://developers.google.com/web/fundamentals/design-and-ux/animations/css-vs-javascript?hl=zh-cn)
+4. [Google web developer](https://developers.google.com/web/fundamentals/design-and-ux/animations/css-vs-javascript?hl=zh-cn)
