@@ -34,7 +34,7 @@
     
     ![图2](https://raw.githubusercontent.com/xiezhm3/xiezhm3.github.io/6e62ba484c7203b29add14e3f922310e8eab8f40/assets/img/web-rendering-flow.jpg)
 
-####setTimeout(cb, t)
+#### setTimeout(cb, t)
 
   60fps，即16.7ms刷新一帧，所有的js操作以及UI渲染刷新都要在这个时间间隔之内完成，这样才能保证动画非常流畅。
   
@@ -67,7 +67,7 @@ rAF解决了时机问题，但是，使用rAF不恰当操作页面的时候，�
 
 但是过多的使用transform，会导致cpu和内存占用大，原因是cpu比之前需要管理更多的layer，这样自然会消耗更多的资源。
 
-####Summary
+#### Summary
 
 其实CSS3底层运用的也是类似rAF机制，不过没有深入了解过，也不好讨论。又留了个坑。
 
@@ -75,4 +75,4 @@ rAF解决了时机问题，但是，使用rAF不恰当操作页面的时候，�
 一般而言，考虑到一些js动画库，性能方面其实已经优化的非常好了，比如[velocity.js](http://velocityjs.org)更是宣称自己的性能高于CSS3，
 所以在制作复杂的动画的时候，js是首选，但是一般的动画可以是用CSS3，毕竟不需要引入多一个库，就是最大的优点。
 
-只是很浅显的记录了一些了解的内容，有纰漏的地方等以后了解深入了再回来修改。
+只是很浅显的记录了一些了解的内容，有纰漏的地方等以后了解深入了再回来修改。欢迎提issue ：）
