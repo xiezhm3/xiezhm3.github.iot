@@ -21,7 +21,7 @@
  2. 浏览器的时钟是不准确的，不同浏览器有很大的差别，即使同一个浏览器在不同的环境（电池电量，cpu等）下也会不一样
      
      一般而言，chrome浏览器的时钟是4.8ms，IE8差不多为15.6ms，所以使用setTimeout(callback, t)来异步执行回调函数，执行的
-     时间可能并不如你想象的那样，因为这个时间本身就不是1ms或者0.1ms来量度的；
+     时机可能并不如你想象的那样，因为这个时间本身就不是1ms或者0.1ms来量度的；
      
  3. Update UI Rendering是在event loop执行完一个task之后
  
@@ -73,6 +73,16 @@ rAF解决了时机问题，但是，使用rAF不恰当操作页面的时候，�
 
 目前CSS3支持的动画效果可以从[ANIMATE](https://daneden.github.io/animate.css/)上看到，支持的种类其实也是有限的。所以，
 一般而言，考虑到一些js动画库，性能方面其实已经优化的非常好了，比如[velocity.js](http://velocityjs.org)更是宣称自己的性能高于CSS3，
-所以在制作复杂的动画的时候，js是首选，但是一般的动画可以是用CSS3，毕竟不需要引入多一个库，就是最大的优点。
+所以在制作复杂的动画的时候，js是首选，但是一般的动画可以用CSS3，毕竟不需要引入多一个库，就是最大的优点。
 
 只是很浅显的记录了一些了解的内容，有纰漏的地方等以后了解深入了再回来修改。欢迎提issue ：）
+
+##### References
+
+1. [Youtube](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+    
+2.  [Infoq](http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering)
+    
+3. [Event loop process model](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
+    
+ 4. [Google web developer](https://developers.google.com/web/fundamentals/design-and-ux/animations/css-vs-javascript?hl=zh-cn)
