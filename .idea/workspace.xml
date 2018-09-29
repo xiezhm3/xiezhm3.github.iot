@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blog/comparison-st-raf-css3-animation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/comparison-st-raf-css3-animation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/comparison-st-raf-css3-animation.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/src/blog/comparison-st-raf-css3-animation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="435">
-                <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <first_editor relative-caret-position="332">
+                <caret line="34" column="144" selection-start-line="34" selection-start-column="144" selection-end-line="34" selection-end-column="144" />
               </first_editor>
               <second_editor />
             </state>
@@ -185,17 +183,18 @@
       <workItem from="1522574218907" duration="878000" />
       <workItem from="1537186504937" duration="28000" />
       <workItem from="1537186537225" duration="169000" />
-      <workItem from="1538205803862" duration="5998000" />
+      <workItem from="1538205803862" duration="6252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47853000" />
+    <option name="totallyTimeSpent" value="48107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="957" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1506932" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1506932" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -352,8 +351,8 @@
     <entry file="file://$PROJECT_DIR$/src/blog/comparison-st-raf-css3-animation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="435">
-            <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <first_editor relative-caret-position="332">
+            <caret line="34" column="144" selection-start-line="34" selection-start-column="144" selection-end-line="34" selection-end-column="144" />
           </first_editor>
           <second_editor />
         </state>

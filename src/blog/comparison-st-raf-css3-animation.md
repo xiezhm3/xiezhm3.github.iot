@@ -30,9 +30,9 @@
      
  4. Web render flow
  
-    ![如图](/Users/jimmy/xiezhm3.github.io/assets/img/web-render-flow.jpg)
+    ![如图](https://raw.githubusercontent.com/xiezhm3/xiezhm3.github.io/6e62ba484c7203b29add14e3f922310e8eab8f40/assets/img/web-render-flow.jpg)
     
-    ![图2](/Users/jimmy/xiezhm3.github.io/assets/img/web-rendering-flow.jpg)
+    ![图2](https://raw.githubusercontent.com/xiezhm3/xiezhm3.github.io/6e62ba484c7203b29add14e3f922310e8eab8f40/assets/img/web-rendering-flow.jpg)
 
 ####setTimeout(cb, t)
 
