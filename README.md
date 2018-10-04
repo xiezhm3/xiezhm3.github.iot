@@ -9,6 +9,9 @@
 
 4. [AppendChild at once or one bye one?](src/blog/append-child-difference.md)
 
+5. [QuerySelector* or getElementBy*](src/blog/dif-querySelector*-getElementBy*.md)
+
+
 ### Resources
 
 1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （强烈推荐
