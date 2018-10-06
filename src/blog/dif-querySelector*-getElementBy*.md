@@ -19,9 +19,9 @@ subsequently filter the result of calling other methods like getElementsByTagNam
 
 #### 2. 返回值
 
-首先，querySelector系列返回的是[object NodeList]，而getElementBy\*系列返回的值的类型是[object HTMLCollection]。
+首先，querySelectorAll系列返回的是[object NodeList]，而getElementsByTagName返回的值的类型是[object HTMLCollection]。
 
-NodeList和HTMLCollection之前有什么区别和联系呢？
+NodeList和HTMLCollection之间有什么区别和联系呢？
 
 我们来看DOM Core规范里面是怎么写的。先上[domcore#concept-collection](https://www.w3.org/TR/domcore/#concept-collection)。
 
@@ -185,7 +185,7 @@ NodeList 对象会包含文档中的所有节点，如 Element、Text 和 Commen
 
 从结果来看，也证实了之前的猜测是正确的。
 
-尽管相对来说querySelector的性能不佳，但是我个人还是觉得用querySlector\*更好，一是可以减少
+尽管相对来说querySelector的性能不佳，但是我个人还是觉得用querySlectorALL更好，一是可以减少
 代码陷入死循环的可能性，另一个是它支持css selector的形式，更加灵活。在平时的dom操作过程中，这些性能
 上的差异其实是可以忽略的。
 
