@@ -30,35 +30,9 @@
 		</div>
 		<div id='pikachu'></div>
 		<div id='ash'></div>
-		<div id="foo">
-			<p class="warning">This is a sample warning</p>
-			<p class="error">This is a sample error</p>
-		</div>
-		<div id="bar">
-			<p>...</p>
-		</div>
 	</div>
 
 <script>
-	window.onload = function () {
-	    var container = document.querySelectorAll('div');
-	    var getContainer = document.getElementsByTagName('div');
-	    console.log('length before append child: ' + container.length);
-
-	    var child = document.createElement('div');
-
-	    document.body.appendChild(child);
-
-	    console.log('length after append child: ' + container.length);
-	    console.log('container: ' + container);
-
-	    console.log('length of get container: ' + getContainer.length);
-	    console.log('getContainer: ' + getContainer);
-	};
-
-    var div = document.getElementById("foo");
-    var p = div.querySelector("body p");
-    console.log(p.innerHTML);
 </script>
 </body>
 </html>
