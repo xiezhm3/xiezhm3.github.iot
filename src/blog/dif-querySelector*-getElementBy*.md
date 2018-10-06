@@ -1,4 +1,4 @@
-## querySelector与getElementBy\*区别
+## querySelector*与getElementBy\*区别
 
 *@created at Sat Oct 6, 2018 @JX*
 
@@ -19,7 +19,7 @@ subsequently filter the result of calling other methods like getElementsByTagNam
 
 #### 2. 返回值
 
-首先，querySelector系列返回的是[object NodeList]，而getElementBy\*系列返回的指的类型是[object HTMLCollection]。
+首先，querySelector系列返回的是[object NodeList]，而getElementBy\*系列返回的值的类型是[object HTMLCollection]。
 
 NodeList和HTMLCollection之前有什么区别和联系呢？
 
