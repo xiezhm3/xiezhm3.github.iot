@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dif</title>
+</head>
+
+<body>
+<div id="foo">
+    <p class="warning">This is a sample warning</p>
+    <p class="error">This is a sample error</p>
+</div>
+<div id="bar">
+    <p>...</p>
+</div>
+
+<script>
+
+    window.onload = function (ev) {
+
+        var times = 10000000;
+
+        var s1 = new Date().getTime();
+        for(var i = 0; i < times; i++) {
+            document.querySelectorAll('div');
+        }
+        var e1 = new Date().getTime();
+        console.log('querySelectorAll Time Waste: ' + (e1 - s1));
+
+
+        var s2 = new Date().getTime();
+        for(var i = 0; i < times; i++) {
+            document.getElementsByTagName('div');
+        }
+        var e2 = new Date().getTime();
+        console.log('getElementsByTagName Time Waste: ' + (e2 - s2));
+
+        var s3 = new Date().getTime();
+        for(var i = 0; i < times; i++) {
+            document.querySelector('#foo');
+        }
+        var e3 = new Date().getTime();
+        console.log('querySelector Time Waste: ' + (e3 - s3));
+
+
+        var s4 = new Date().getTime();
+        for(var i = 0; i < times; i++) {
+            document.getElementById('foo');
+        }
+        var e4 = new Date().getTime();
+        console.log('getElementById Time Waste: ' + (e4 - s4));
+    };
+
+</script>
+</body>
+</html>

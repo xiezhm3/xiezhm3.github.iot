@@ -41,7 +41,6 @@
     
             var num = 1000000;
     
-            var docFrag = document.createDocumentFragment();
             for(var i = 0; i < num; i++) {
                 var div = document.createElement("div");
                 div.appendChild(document.createTextNode(i));
