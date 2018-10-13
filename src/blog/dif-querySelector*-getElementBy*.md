@@ -1,4 +1,4 @@
-## querySelector*与getElementBy\*区别
+## querySelectorAll与getElementBy\*区别
 
 *@created at Sat Oct 6, 2018 @JX*
 
@@ -115,6 +115,8 @@ NodeList 对象会包含文档中的所有节点，如 Element、Text 和 Commen
 返回elements的getElementBy\*要高了。
 
 [JSPerf](https://jsperf.com/getelementsby-vs-queryselectorall/1)现在挂了，不知道为何，所以只好自己写点简单的测试代码来测试一下性能。
+
+【2018-10-13update】 JSPERF IS OK NOW.
 
     <!DOCTYPE html>
     <html lang="en">
