@@ -12,6 +12,9 @@
 5. [QuerySelector* or getElementBy*](src/blog/dif-querySelector*-getElementBy*.md)
 
 
-### Resources
+#### unserstanding ES6
+1. [C01 块级作用域绑定](src/blog/understanding_ES6/chapter_01)
+
+#### Resources
 
 1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （强烈推荐
