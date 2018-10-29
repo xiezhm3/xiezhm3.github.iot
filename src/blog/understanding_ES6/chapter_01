@@ -1,0 +1,115 @@
+## CHAPTER 01 块级作用域绑定
+
+##### 1.var变量提升机制（Hoisting）
+
+    在函数作用域或全局作用域中通过var声明的变量，无论实际上是在哪里声明的，都会被当成在当前作用域顶部声明的变量，也就是说，无论如何，变量都会被创建。
+    
+##### 2.块级声明
+
+> 声明在指定块的作用域之外无法访问的变量
+
+块级作用域（词法作用域）存在于：函数内部和块中
+
+##### 3. let
+
+    由于let声明不会被提升，因此开发者通常讲let声明语句放在封闭代码块的顶部，以便整个代码块都可以访问。
+    
+    同一作用域中不能用let重复定义已经存在的标识符。
+
+##### 4. const
+
+    不会被提升到作用域顶部。
+    每个通过const声明的常量必须进行初始化。
+    
+    * const声明不允许修改绑定，但是允许修改绑定的值。
+
+##### 5. Temporal Dead Zone
+
+    js引擎在扫描代码发现变量声明时，要么将它们提升至作用域顶部（var），要么将声明放到TDZ中（let/const）。访问TDZ中的变量会触发运行时错误。
+    只有执行过变量声明语句之后，变量才会从TDZ中移出，然后方可正常访问。
+    
+    console.log(typeof value); // 'undefined'
+    
+    if(true) {
+      let value = 'blue';
+    }
+    
+    由于typeof是在块之外执行的，此时的value并不在TDZ中，也意味着不存在value这个绑定，typeof最终返回的是'undefined'，因此不会报错。
+
+##### 6. 循环中的块作用域绑定
+
+> 主要是为了解决for循环中变量共享的问题，es5中一般通过闭包的方式来实现，也可称为使用立即调用函数表达式（IIFE），为每一个变量i都创建一个副本，
+并存储起来。这个变量的值就是相应迭代创建的函数所使用的值：
+
+    var funcs = [];
+    
+    for(var i = 0; i < 10; i++) {
+        funcs.push((function(value) {
+            return function() {
+                console.log(value);
+            };
+        })(i););
+    }
+    
+    funcs.forEach(function(f) {
+        f();
+    });
+    
+而使用let即可简化循环过程，每次迭代循环都会创建一个新变量i，并以之前迭代中同名变量的值将其初始化。
+
+        var funcs = [];
+        
+        for(let i = 0; i < 10; i++) {
+            funcs.push(function() {
+                console.log(i);
+            });
+        }
+        
+        funcs.forEach(function(f) {
+            f();
+        });
+对于 for～in 循环和 for～of 循环都是一样的。
+    
+    var o = {
+      a: 1,
+      b: true
+    };
+    
+    for(let key in o) {
+        funcs.push(function() {
+            console.log(key);
+        });
+    }
+
+    // ...
+    
+    
+> let 声明在循环内部的行为是标准中专门定义的。它不一定与let的不提升特性相关。早起的let实现是不包括这一行为的。
+
+循环中使用const绑定时的行为也和let一致，但是不能修改绑定的常量，否则会报错。
+
+##### 7. 全局块作用域绑定
+
+    let和const与var的另一个区别是它们在全局作用域中的行为。
+
+    当var被用于全局作用域时，创建的新的全局变量会作为全局对象（浏览器环境为window）的属性。这样意味着var很可能会在无意之中覆盖一个已经
+    存在的全局变量，造成污染。
+    
+    但是如果在全局作用域中使用let或者const，则会在全局作用域下创建一个新的绑定，但该绑定不会添加到全局对象上。
+    也就是说，用let或者const声明不能覆盖全局变量，只能遮蔽它。
+    
+    let re = 'hello';
+    console.log(re); // hello
+    console.log(window.rg === re); // false
+    
+    console.log(re in widow); // false
+    
+如果不惜那个为全局对象创建属性，使用let和const要安全得多。
+
+##### 8. 块级绑定的最佳实践
+
+    默认使用const，只有确实需要改变变量的值时才使用let。
+
+因为大部分变量的值在初始化后不应再改变，而预料外的变量值的改变是很多bug的源头。
+
+   
