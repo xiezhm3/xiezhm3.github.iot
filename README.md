@@ -13,7 +13,7 @@
 
 
 #### unserstanding ES6
-1. [C01 块级作用域绑定](src/blog/understanding_ES6/chapter_01)
+1. [Notes @Chapter 01 块级作用域绑定](src/blog/understanding_ES6/chapter_01)
 
 #### Resources
 
