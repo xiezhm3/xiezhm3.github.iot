@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-01.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog/blog.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/blog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog/understanding_ES6/01.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/understanding_ES6/01.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blog/understanding_ES6/02.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/understanding_ES6/02.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,8 +45,8 @@
         <entry file="file://$PROJECT_DIR$/src/blog/understanding_ES6/02.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -55,11 +54,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blog/understanding_ES6/01.md">
+        <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-01.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="123">
-                <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+              <first_editor relative-caret-position="150">
+                <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -137,10 +136,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/chapter_02.md" />
         <option value="$PROJECT_DIR$/src/blog/blog.md" />
-        <option value="$PROJECT_DIR$/src/blog/understanding_ES6/02.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/01.md" />
         <option value="$PROJECT_DIR$/../Documents/workspace/FE/menu_demo/src/views/About.vue" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/C_01.md" />
+        <option value="$PROJECT_DIR$/src/blog/understanding_ES6/02.md" />
+        <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-01.md" />
       </list>
     </option>
   </component>
@@ -180,7 +180,15 @@
               <item name="xiezhm3.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="understanding_ES6" type="462c0819:PsiDirectoryNode" />
+              <item name="reading" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiezhm3.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiezhm3.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="zeng_guo_fan_letters" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,12 +248,12 @@
       <workItem from="1539422462059" duration="288000" />
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
-      <workItem from="1541000429677" duration="196000" />
+      <workItem from="1541000429677" duration="3461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74882000" />
+    <option name="totallyTimeSpent" value="78147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -262,7 +270,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.57984143" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.45526615" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -473,21 +481,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog/understanding_ES6/02.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog/understanding_ES6/01.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="123">
             <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/understanding_ES6/02.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-01.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
