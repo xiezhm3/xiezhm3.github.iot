@@ -1,4 +1,4 @@
 # `Jimmy X Site`
 
-[Jimmy's blog](src/blog/blog.md)
+### · [Blog](src/blog/blog.md)
 
