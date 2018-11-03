@@ -1,5 +1,4 @@
-# JimmyX Blog
-> some notes.
+# `Jimmy X Site`
 
 [Jimmy's blog](src/blog/blog.md)
 

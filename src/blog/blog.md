@@ -1,3 +1,7 @@
+
+# JimmyX Blog
+> some notes.
+
 1. [Notes @flex box](./flexible-box.md)
 
 2. [Web browser rendering mechanism(placeholder)](#)
@@ -16,4 +20,4 @@
 
 #### Resources
 
-1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （强烈推荐
+1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （`强烈推荐`
