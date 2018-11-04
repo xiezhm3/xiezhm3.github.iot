@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-03.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/blog/nodejs-event-loop.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -40,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-03.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
+            <state split_layout="SECOND">
               <first_editor relative-caret-position="75">
                 <caret line="5" column="197" selection-start-line="5" selection-start-column="197" selection-end-line="5" selection-end-column="197" />
               </first_editor>
@@ -101,7 +100,6 @@
         <option value="$PROJECT_DIR$/src/blog/nodejs-event-loop.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/chapter_02.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/01.md" />
-        <option value="$PROJECT_DIR$/../Documents/workspace/FE/menu_demo/src/views/About.vue" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/C_01.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-01.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/02.md" />
@@ -109,6 +107,7 @@
         <option value="$PROJECT_DIR$/src/blog/blog.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-03.md" />
+        <option value="$PROJECT_DIR$/../Documents/workspace/FE/menu_demo/src/views/About.vue" />
       </list>
     </option>
   </component>
@@ -216,18 +215,18 @@
       <workItem from="1539422462059" duration="288000" />
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
-      <workItem from="1541000429677" duration="6948000" />
+      <workItem from="1541000429677" duration="7994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81634000" />
+    <option name="totallyTimeSpent" value="82680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26943943" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26943943" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -238,7 +237,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21428572" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4642857" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -479,21 +478,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog/nodejs-event-loop.md">
+    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-03.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="20" selection-start-column="20" selection-end-column="20" />
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="197" selection-start-line="5" selection-start-column="197" selection-end-line="5" selection-end-column="197" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-03.md">
+    <entry file="file://$PROJECT_DIR$/src/blog/nodejs-event-loop.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="197" selection-start-line="5" selection-start-column="197" selection-end-line="5" selection-end-column="197" />
+          <first_editor>
+            <caret column="20" selection-start-column="20" selection-end-column="20" />
           </first_editor>
           <second_editor />
         </state>
