@@ -70,8 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-07.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="370" selection-start-line="5" selection-start-column="370" selection-end-line="5" selection-end-column="370" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-08.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -164,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-04.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-05.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-06.md" />
+        <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-07.md" />
       </list>
     </option>
   </component>
@@ -276,12 +289,12 @@
       <workItem from="1539422462059" duration="288000" />
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
-      <workItem from="1541000429677" duration="8897000" />
+      <workItem from="1541000429677" duration="9104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83583000" />
+    <option name="totallyTimeSpent" value="83790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -585,6 +598,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-07.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="370" selection-start-line="5" selection-start-column="370" selection-end-line="5" selection-end-column="370" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
