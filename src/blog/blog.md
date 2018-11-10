@@ -12,6 +12,7 @@
 1. [Notes @Chapter 01 块级作用域绑定](./understanding_ES6/01.md)
 2. [Notes @Chapter 02 字符串和正则表达式](./understanding_ES6/02.md)
 3. [Notes @Chapter 03 函数](./understanding_ES6/03.md)
+4. [Notes @Chapter 04 扩展对象的功能性](./understanding_ES6/04.md)
 
 #### Resources
 
