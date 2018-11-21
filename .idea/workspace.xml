@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/blog/understanding_ES6/05.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/understanding_ES6/05.md" afterDir="false" />
-    </list>
+    <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -27,8 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-20.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="210">
+                <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-21.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -64,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/CSS_box_sizing.html" />
         <option value="$PROJECT_DIR$/basic.css" />
         <option value="$PROJECT_DIR$/object_oriented_inherits.html" />
@@ -115,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-18.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-19.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/05.md" />
+        <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-20.md" />
       </list>
     </option>
   </component>
@@ -246,12 +256,12 @@
       <workItem from="1539422462059" duration="288000" />
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
-      <workItem from="1541000429677" duration="31582000" />
+      <workItem from="1541000429677" duration="32048000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106268000" />
+    <option name="totallyTimeSpent" value="106734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -267,7 +277,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40873015" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.45833334" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -282,13 +292,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml" />
     <entry file="file://$PROJECT_DIR$/jquery-3.2.1.min.js" />
     <entry file="file://$PROJECT_DIR$/src/html/object_oriented_inherits.html">
@@ -729,6 +732,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="60">
             <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-20.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
