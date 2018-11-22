@@ -37,8 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-21.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="330" selection-start-line="6" selection-start-column="330" selection-end-line="6" selection-end-column="330" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2918-11-22.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -74,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CSS_box_sizing.html" />
         <option value="$PROJECT_DIR$/basic.css" />
         <option value="$PROJECT_DIR$/object_oriented_inherits.html" />
         <option value="$PROJECT_DIR$/object_oriented_js.html" />
@@ -125,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-19.md" />
         <option value="$PROJECT_DIR$/src/blog/understanding_ES6/05.md" />
         <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-20.md" />
+        <option value="$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-21.md" />
       </list>
     </option>
   </component>
@@ -256,12 +268,12 @@
       <workItem from="1539422462059" duration="288000" />
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
-      <workItem from="1541000429677" duration="32048000" />
+      <workItem from="1541000429677" duration="32229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106734000" />
+    <option name="totallyTimeSpent" value="106915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -292,7 +304,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_config.yml" />
     <entry file="file://$PROJECT_DIR$/jquery-3.2.1.min.js" />
     <entry file="file://$PROJECT_DIR$/src/html/object_oriented_inherits.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -742,6 +753,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="210">
             <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/reading/zeng_guo_fan_letters/2018-11-21.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="330" selection-start-line="6" selection-start-column="330" selection-end-line="6" selection-end-column="330" />
           </first_editor>
           <second_editor />
         </state>
