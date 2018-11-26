@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/blog/reading/wan_li_15_nian/2018-11-25.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/reading/wan_li_15_nian/2018-11-25.md" afterDir="false" />
-    </list>
+    <list default="true" id="8abc0462-9308-424c-a6f8-cd64b4cd5131" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -32,7 +30,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="120">
-                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                <caret line="8" column="116" selection-start-line="8" selection-start-column="116" selection-end-line="8" selection-end-column="116" />
               </first_editor>
               <second_editor />
             </state>
@@ -230,16 +228,15 @@
       <workItem from="1539999954122" duration="250000" />
       <workItem from="1540718129015" duration="7785000" />
       <workItem from="1541000429677" duration="33076000" />
-      <workItem from="1543161378812" duration="252000" />
+      <workItem from="1543161378812" duration="998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108014000" />
+    <option name="totallyTimeSpent" value="108760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.26943943" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -756,7 +753,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="120">
-            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <caret line="8" column="116" selection-start-line="8" selection-start-column="116" selection-end-line="8" selection-end-column="116" />
           </first_editor>
           <second_editor />
         </state>
