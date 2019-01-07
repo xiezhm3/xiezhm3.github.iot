@@ -1,5 +1,5 @@
 import {
     name
-} from './name'
+} from './name.js'
 
 export default `hello, ${name}`;
