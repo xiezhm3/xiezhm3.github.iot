@@ -31,4 +31,3 @@ function _sum() {
 }
 
 var sumCurry = currying(_sum);
-var r = sumCurry(1, 2, 3)(4)(5, 6);
