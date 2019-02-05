@@ -4,3 +4,12 @@ export function runPrimiseInSequence(arr, input) {
     Promise.resolve(input)
   );
 }
+
+//reduce method
+
+/*arr.reduce(callback[, initialValue]);
+arguments:
+    callback:
+        accumulator, currentValue, currentIndex(optional), originArray(optional)
+    initianValue
+*/
