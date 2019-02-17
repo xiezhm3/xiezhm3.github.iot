@@ -372,6 +372,139 @@ es6:
 
 ### `内建对象的继承`
 
+在 es5 以及之前的版本中，使用继承的方式继承的内建对象的派生类的行为无法和内建对象保持一致。
+
+如数组：
+
+    var a = [];
+    a.push(1);
+    a.length; // 1
+    a.length = 0;
+    console.log(a[0]); // 'undefined'
+
+    // ES5 继承数组
+    function MyArray() {
+        Array.apply(this, arguments);
+    }
+    MyArray.prototype = Object.create(Array.prototype, {
+        constructor: {
+            value: MyArray,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        }
+    });
+    var arr = new MyArray();
+    arr[0] = 'll';
+    console.log(arr.length); // 0
+
+    arr.length = 0;
+    console.log(arr[0]); // 'll'
+
+可以看出行为不一致。这是因为通过传统 js 继承形式石显的数组继承没有从 Array.apply()或原型赋值中继承相关功能。
+
+而 ES6 与之不同，主要体现在两个方面：
+
+    1. es5的继承方式是先由派生类型创建this值，然后调用基类的构造函数（Array.apply()）.这意味着，this的值一开始指向的是MyArray实例，但是随后会被来自Array的其他属性所修饰
+    2. es6中的继承与之相反，先由基类（Array）创建this的值，然后派生类的构造函数再修改这个值。所以一开始可以通过this访问基类的所有内建功能，然后再正确的接收所有与之相关的功能
+
+    class MyArray extends Array {
+        // ...
+    }
+    var arr = new MyArray();
+    arr[0] = 1;
+    arr.length; // 1
+
+    arr.length = 0;
+    console.log(arr[0]); // 'undefined'
+
 ### `Symbol.species属性`
 
+> 内建对象继承的一个实用之处是，原本在内建对象中返回实例自身的方法将自动返回派生类的实例。如下：
+
+    class MyArray extends Array {
+        // ...
+    }
+    let items = new MyArray(1,2,3,4),
+        subItems = items.slice(1, 3);
+
+    console.log(items instanceof MyArray); // true
+    console.log(subItems instanceof MyArray); // true
+
+> 在浏览器引擎背后是通过 Symbol.species 属性实现这一行为的。
+
+> Symbol.species 被用于定义返回函数的静态访问器属性。被返回的函数是一个构造函数，当要在一个实例的方法中（不是构造函数中）创建类的实例时必须使用这个构造函数。
+
+    · Array
+    · ArrayBuffer
+    · Map
+    · Promise
+    · RegExp
+    · Set
+    ` Typed arrays
+
+上面的每种类型都有一个默认的 Symbol.species 属性，该属性的返回值为 this。这也意味着该属性总会返回构造函数。
+
+自定义的类中实现此功能，大概如此：
+
+    class MyClass {
+        static get [Symbol.species]() {
+            return this;
+        }
+        constructor(v) {
+            this.value = v;
+        }
+        clone() {
+            return new this.constructor[Symbol.species](this.value);
+        }
+    }
+
+> Symbol.species 被用来给 MyClass 赋值静态访问器属性。只有 getter，没有 setter，因为不能改变类的种类。调用 this.constructor[Symbol.species]返回 MyClass.
+
+> 通过 Symbol.species 可以定义当派生类的方法返回实例时，应该返回的值的类型。
+
+    class MyArray extends Array {
+        static get [Symbol.species]() {
+            return Array;
+        }
+    }
+    let items = new MyArray(1,2,3,4);
+    let subItems = items.slice(1, 3);
+
+    items instanceof MyArray; // true
+    subItems instanceof MyArray; // false
+    subItems instance of Array; // true
+
+> 一般来说，只要想在类方法中调用 this.constructor，就应该使用 Symbol.species 属性，从而让派生类重写返回的类型。
+
 ### `在类的构造函数中使用new.target`
+
+> new.target 会根据函数被调用的方式而改变。函数不是通过 new 调用的， new.target 为 undefined.
+>
+> 在类的构造函数中也可以通过 new.target 来确定类是如何被调用的。在简单的情况下，new.target 就相当于类的构造函数。
+
+    class Parent {
+        constructor() {
+            console.log(new.target === Parent);
+        }
+    }
+    var p = new Parent(); // true
+
+> 每个够赞函数都可以更具自身被调用的方式改变自己的行为。 例如可以用 new.target 来创建抽象基类：
+
+    class Shape() {
+        constructor() {
+            if(new.target == Shape) {
+                throw new Error('this class cannot be instanced.');
+            }
+        }
+    }
+    class Rectangle extends Shape {
+        constructor(length, width) {
+            super();
+            this.length = length;
+            this.width = width;
+        }
+    }
+
+##### 因为类必须通过 new 关键字才能调用，所以在类的构造函数中，new.target 属性永远不会是 undefined.
