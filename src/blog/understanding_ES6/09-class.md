@@ -490,7 +490,7 @@ es6:
     }
     var p = new Parent(); // true
 
-> 每个够赞函数都可以更具自身被调用的方式改变自己的行为。 例如可以用 new.target 来创建抽象基类：
+> 每个构造函数都可以根据自身被调用的方式改变自己的行为。 例如可以用 new.target 来创建抽象基类：
 
     class Shape() {
         constructor() {
