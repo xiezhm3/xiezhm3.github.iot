@@ -15,7 +15,8 @@
 2. [Notes @Chapter 02 字符串和正则表达式](./understanding_ES6/02.md)
 3. [Notes @Chapter 03 函数](./understanding_ES6/03.md)
 4. [Notes @Chapter 04 扩展对象的功能性](./understanding_ES6/04.md)
-5. [Notes @Chapter 09 class](./understanding_ES6/09-class.md)
+5. [Notes @Chapter 05 解构](./understanding_ES6/05.md)
+6. [Notes @Chapter 09 class](./understanding_ES6/09-class.md)
 
 #### Resources
 
