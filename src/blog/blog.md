@@ -8,6 +8,7 @@
 6. [Node.js Async I/O](./nodejs-event-loop.md)
 7. [bind](./bind.md)
 8. [require, export, module.exports, import](https://github.com/ShowJoy-com/showjoy-blog/issues/39)
+9. [stringify](./stringify.md)
 
 #### Understanding ES6
 
