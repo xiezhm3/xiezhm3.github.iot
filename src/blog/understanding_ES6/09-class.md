@@ -51,7 +51,7 @@
             }
             this.name = name;
         }
-        Object.defineProperty(PersonClass2.prototype, 'sayName'), {
+        Object.defineProperty(PersonClass2.prototype, 'sayName', {
             value: function() {
                 if(typeof new.target !== 'undefined') {
                     throw new Error('cannot use new to call');
@@ -61,7 +61,7 @@
             enumerable: false,
             writable: true,
             configurable: true
-        };
+        });
         return PersonClass2;
     }());
 
@@ -259,7 +259,7 @@ es6:
 
 #### `类方法遮蔽`
 
-即派生类中的同名方法会覆盖基类的方法。如果想使用基类中的方法，则使用 super[methodName]()即可。
+即派生类中的同名方法会覆盖基类的方法。如果想使用基类中的方法，则使用 super.[methodName]()即可。
 
     class Parent {
         constructor(name) {
