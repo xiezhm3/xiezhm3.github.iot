@@ -31,3 +31,26 @@ function _sum() {
 }
 
 var sumCurry = currying(_sum);
+
+function currying_(fn) {
+  let allArgs = [];
+  return function next() {
+    let args = [].slice.call(arguments);
+    if (args.length) {
+      allArgs = allArgs.concat(args);
+      console.log(allArgs);
+      return next;
+    } else {
+      fn.apply(null, allArgs);
+    }
+  };
+}
+
+var add = currying_(function() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(sum);
+    sum += arguments[i];
+  }
+  return sum;
+});
