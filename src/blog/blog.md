@@ -19,6 +19,7 @@
 5. [Notes @Chapter 05 解构](./understanding_ES6/05.md)
 6. [Notes @chapter 06 Symbol](./understanding_ES6/06.md)
 7. [Notes @Chapter 09 class](./understanding_ES6/09-class.md)
+8. [Notes @Chapter 12 proxy](../../demo/proxy.js)
 
 #### Resources
 

@@ -28,5 +28,14 @@ let proxy = new Proxy(target, {
       return false; // 'value' cannot be deleted
     }
     return Reflect.deleteProperty(trapTarget, key);
+  },
+  setPrototypeOf(trapTarget, proto) {
+    return Reflect.setPrototypeOf(trapTarget, proto);
+  },
+  getPrototypeOf(trapTarget) {
+    return Reflect.getPrototypeOf(trapTarget);
   }
 });
+
+let targetProto = Object.getPrototypeOf(target);
+let proxyProto = Object.getPrototypeOf(proxy);
