@@ -24,3 +24,5 @@
 #### Resources
 
 1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （`强烈推荐`
+2. [理解 angularjs 机制系列](https://github.com/xufei/blog)
+3. [learn vue](https://github.com/answershuto/learnVue)
