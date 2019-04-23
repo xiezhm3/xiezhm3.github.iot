@@ -9,6 +9,7 @@
 7. [bind](./bind.md)
 8. [require, export, module.exports, import](https://github.com/ShowJoy-com/showjoy-blog/issues/39)
 9. [stringify](./stringify.md)
+10. [https简单介绍](./https.md)
 
 #### Understanding ES6
 
