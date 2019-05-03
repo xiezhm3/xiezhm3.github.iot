@@ -41,7 +41,7 @@ function currying_(fn) {
       console.log(allArgs);
       return next;
     } else {
-      fn.apply(null, allArgs);
+      return fn.apply(null, allArgs);
     }
   };
 }
