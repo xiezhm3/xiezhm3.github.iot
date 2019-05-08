@@ -45,12 +45,13 @@ var inorder = function (root, vals) {
     if (root === null) {
         return;
     }
-    inorder(root.left.vals);
+    inorder(root.left, vals);
     vals.push(root.val);
-    inorder(root.right.vals);
+    inorder(root.right, vals);
 };
 
 // the most efficient way among these 3 ways
+// need to cut the left child.
 var p;
 var increasingBSTRecursive02 = function (root) {
     var dummy = new TreeNode(0);
