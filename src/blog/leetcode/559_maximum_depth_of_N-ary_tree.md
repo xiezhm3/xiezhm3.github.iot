@@ -4,4 +4,4 @@
 
 可以使用递归或者迭代。
 
-详细代码可看[559 Maximum Depth of N-ary Tree](../../leetcode/tree/559_Maximum_Depth_of_N-ary_Tree.js)
+solution可看[559 Maximum Depth of N-ary Tree](../../leetcode/tree/559_Maximum_Depth_of_N-ary_Tree.js)
