@@ -22,6 +22,11 @@
 7. [Notes @Chapter 09 class](./understanding_ES6/09-class.md)
 8. [Notes @Chapter 12 proxy](../../demo/proxy.js)
 
+### leetcode
+
+1. [559.Maximum Depth of N-ary Tree](./leetcode/559_maximum_depth_of_N-ary_tree.md)
+2. [897.Increasing Order Search Tree](./leetcode/897_increasing_order_search_tree.md)
+
 #### Resources
 
 1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （`强烈推荐`
