@@ -29,9 +29,23 @@ We should return its max depth, which is 3.
 /**
  * @param {Node} root
  * @return {number}
- * BFS
  */
 var maxDepth = function (root) {
+    // dfs
+    if (root == null) {
+        return 0;
+    }
+    var max = 0;
+    var children = root.children;
+    for (var i = 0; i < children.length; i++) {
+        if (children[i] !== null) {
+            max = Math.max(max, maxDepth(children[i]));
+        }
+    }
+    return max + 1;
+
+
+    /* bfs
     if (root == null) {
         return 0;
     }
@@ -49,4 +63,27 @@ var maxDepth = function (root) {
         depth++;
     }
     return depth;
+    */
+    // recursive solution
+    if (root == null) {
+        return 0;
+    }
+    var maxDepth = 1;
+    var depths = [],
+        nodes = [];
+    nodes.push(root);
+    depths.push(1);
+    while (nodes.length) {
+        var cur = nodes.pop();
+        var depth = depths.pop();
+        var children = cur.children;
+        if (children && !children.length) {
+            maxDepth = maxDepth > depth ? maxDepth : depth;
+        }
+        for (var i = 0; i < children.length; i++) {
+            nodes.push(children[i]);
+            depths.push(depth + 1);
+        }
+    }
+    return maxDepth;
 };
