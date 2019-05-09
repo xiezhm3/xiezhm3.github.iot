@@ -11,7 +11,7 @@
 9. [stringify](./stringify.md)
 10. [https简单介绍](./https.md)
 
-#### Understanding ES6
+## Understanding ES6
 
 1. [Notes @Chapter 01 块级作用域绑定](./understanding_ES6/01.md)
 2. [Notes @Chapter 02 字符串和正则表达式](./understanding_ES6/02.md)
@@ -24,8 +24,11 @@
 
 ### leetcode
 
+#### Tree
+
 1. [559.Maximum Depth of N-ary Tree](./leetcode/559_maximum_depth_of_N-ary_tree.md)
 2. [897.Increasing Order Search Tree](./leetcode/897_increasing_order_search_tree.md)
+3. [690. Employee Importance](./leetcode/690_employee_importance.md)
 
 #### Resources
 
