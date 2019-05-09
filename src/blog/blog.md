@@ -30,6 +30,7 @@
 2. [897.Increasing Order Search Tree](./leetcode/897_increasing_order_search_tree.md)
 3. [690. Employee Importance](./leetcode/690_employee_importance.md)
 4. [993. Cousins in Binary Tree](./leetcode/993._Cousins_in_Binary_Tree.md)
+5. [108. Convert Sorted Array to Binary Search Tree](./leetcode/108_Convert_Sorted_Array_to_Binary_Search_Tree.md)
 
 #### Resources
 
