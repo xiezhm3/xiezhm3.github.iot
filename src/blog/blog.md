@@ -29,6 +29,7 @@
 1. [559.Maximum Depth of N-ary Tree](./leetcode/559_maximum_depth_of_N-ary_tree.md)
 2. [897.Increasing Order Search Tree](./leetcode/897_increasing_order_search_tree.md)
 3. [690. Employee Importance](./leetcode/690_employee_importance.md)
+4. [993. Cousins in Binary Tree](./leetcode/993._Cousins_in_Binary_Tree.md)
 
 #### Resources
 
