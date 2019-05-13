@@ -32,6 +32,11 @@
 4. [993. Cousins in Binary Tree](./leetcode/993._Cousins_in_Binary_Tree.md)
 5. [108. Convert Sorted Array to Binary Search Tree](./leetcode/108_Convert_Sorted_Array_to_Binary_Search_Tree.md)
 
+
+#### linked list
+
+1. [206. Reverse Linked List](./leetcode/206_Reverse_Linked_List.md)
+
 #### Resources
 
 1. [deep into js series @mqyqingfeng](https://github.com/mqyqingfeng/Blog) （`强烈推荐`
